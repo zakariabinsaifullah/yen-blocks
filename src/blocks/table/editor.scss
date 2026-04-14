@@ -1,0 +1,31 @@
+.wp-block-native-table {
+    table.center {
+        figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    table.right {
+        figure {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    .wp-block-image {
+        &.aligncenter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.alignright {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}

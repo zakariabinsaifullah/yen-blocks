@@ -1,0 +1,56 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "yen-blocks/heading",
+    "version": "1.0.0",
+    "title": "Heading",
+    "category": "yen-blocks",
+    "description": "Flexible heading block with custom styles and icon.",
+    "example": {},
+    "supports": {
+        "anchor": true,
+        "html": false,
+        "align": ["wide", "full"],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "attributes": {
+        "uniqueId": {
+            "type": "string",
+            "default": ""
+        },
+        "blockStyle": {
+            "type": "object"
+        },
+        "title": {
+            "type": "string",
+            "default": "Add your title"
+        },
+        "titleTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "titleSize": {
+            "type": "string"
+        },
+        "titleColor": {
+            "type": "string"
+        },
+        "separatorHeight": {
+            "type": "string",
+            "default": "2px"
+        },
+        "lineColor": {
+            "type": "string"
+        },
+        "alignment": {
+            "type": "string",
+            "default": "center"
+        }
+    },
+    "textdomain": "yen-blocks",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css"
+}

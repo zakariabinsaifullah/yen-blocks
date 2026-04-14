@@ -1,0 +1,208 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "yen-blocks/table",
+    "version": "1.0.0",
+    "title": "Table Builder",
+    "category": "yen-blocks",
+    "description": "Build flexible table with any content.",
+    "example": {},
+    "supports": {
+        "anchor": true,
+        "html": false,
+        "align": ["wide", "full"],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "styles": [
+        {
+            "name": "default",
+            "label": "Default",
+            "isDefault": true
+        },
+        {
+            "name": "striped",
+            "label": "Striped"
+        },
+        {
+            "name": "separated",
+            "label": "Separated"
+        }
+    ],
+    "attributes": {
+        "blockStyle": {
+            "type": "object"
+        },
+        "hasHeader": {
+            "type": "boolean",
+            "default": true
+        },
+        "hasFooter": {
+            "type": "boolean",
+            "default": false
+        },
+        "headerCells": {
+            "type": "array",
+            "default": []
+        },
+        "footerCells": {
+            "type": "array",
+            "default": []
+        },
+        "columnCount": {
+            "type": "number",
+            "default": 2
+        },
+        "rowCount": {
+            "type": "number",
+            "default": 3
+        },
+        "isGenerated": {
+            "type": "boolean",
+            "default": false
+        },
+        "isFixedLayout": {
+            "type": "boolean",
+            "default": false
+        },
+        "tableBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "cellPadding": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "headPadding": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "tableBg": {
+            "type": "string"
+        },
+        "tableColor": {
+            "type": "string"
+        },
+        "alignment": {
+            "type": "string",
+            "default": ""
+        },
+        "theadBg": {
+            "type": "string"
+        },
+        "theadColor": {
+            "type": "string"
+        },
+        "tfootBg": {
+            "type": "string"
+        },
+        "tfootColor": {
+            "type": "string"
+        },
+        "stripedColor": {
+            "type": "string"
+        },
+        "stripedBg": {
+            "type": "string"
+        },
+        "tableCellBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "tableCellRadius": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "tableRowBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "headBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "cheadBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "footerBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "cfooterBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        },
+        "shSpacing": {
+            "type": "string"
+        },
+        "svSpacing": {
+            "type": "string"
+        },
+        "thFontSize": {
+            "type": "string"
+        },
+        "tfFontSize": {
+            "type": "string"
+        },
+        "tableRowGap": {
+            "type": "string"
+        }
+    },
+    "textdomain": "yen-blocks",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

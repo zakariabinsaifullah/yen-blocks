@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "yen-blocks/table-row",
+    "version": "1.0.0",
+    "title": "Yen Table Row",
+    "parent": ["yen-blocks/table"],
+    "category": "yen-blocks",
+    "description": "Table Row block for Native Table.",
+    "example": {},
+    "supports": {
+        "anchor": false
+    },
+    "attributes": {
+        "blockStyle": {
+            "type": "object"
+        },
+        "rowColor": {
+            "type": "string"
+        },
+        "rowBg": {
+            "type": "string"
+        },
+        "tableRowBorder": {
+            "type": "object",
+            "default": {
+                "top": "",
+                "right": "",
+                "bottom": "",
+                "left": ""
+            }
+        }
+    },
+    "textdomain": "yen-blocks",
+    "editorScript": "file:./index.js"
+}

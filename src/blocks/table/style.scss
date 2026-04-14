@@ -1,0 +1,179 @@
+.wp-block-yen-blocks-table {
+    border: none;
+    margin-bottom: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--tcolor, #1e293b);
+    background-color: var(--tbg, transparent);
+    border-width: var(--tborder-width, 1px);
+    border-style: var(--tborder-style, solid);
+    border-color: var(--tborder-color, #eee);
+    overflow: hidden;
+    border-radius: 8px;
+
+    th.header-cell + th.header-cell {
+    border-left: var(--chb-width, 1px) var(--chb-style, solid) var(--chb-color, #eee);
+}
+
+    &.is-style-separated {
+        table {
+            border-collapse: separate;
+            border-spacing: var(--table-hseparation, 10px) var(--table-vseparation, 10px);
+        }
+
+        td,
+        th {
+            border-radius: var(--tc-radius, 12px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            background: white;
+        }
+    }
+    
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    figure {
+        margin: 0;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        color: var(--tcolor, #1e293b);
+        background-color: var(--tbg, transparent);
+        border-width: var(--tborder-width, 1px);
+        border-style: var(--tborder-style, solid);
+        border-color: var(--tborder-color, #eee);
+        overflow: hidden;
+        border-radius: 8px;
+        
+        &.fixed-layout {
+            table-layout: fixed;
+        }
+        &.left {
+            text-align: left;
+        }
+        &.center {
+            text-align: center;
+        }
+        &.right {
+            text-align: right;
+        }
+    }
+
+    td,
+    th {
+        box-sizing: border-box;
+        border-width: var(--crow-width, 1px);
+        border-style: var(--crow-style, solid);
+        border-color: var(--crow-color, #eee);
+        transition: all 0.2s ease;
+    }
+
+    // Default Body Cell styles
+    td {
+        padding: var(--td-padding, 15px);
+        background-color: var(--tdbg);
+        color: var(--tdcolor);
+    }
+
+    // Header cells
+    th {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: var(--th-font-size, 0.75rem);
+        padding: var(--th-padding, 15px);
+        background-color: var(--thbg, #eee);
+        color: var(--thcolor, #64748b);
+        border-width: var(--chb-width, 1px);
+        border-style: var(--chb-style, solid);
+        border-color: var(--chb-color, #eee);
+        text-align: inherit;
+    }
+
+    // Body Row styling
+    tbody tr {
+        border-width: var(--trow-width);
+        border-style: var(--trow-style);
+        border-color: var(--trow-color);
+        
+        &:hover td {
+            background-color: rgba(248, 250, 252, 0.5);
+        }
+    }
+
+
+    // Striped styling
+    &.is-style-striped {
+        tbody tr:nth-child(even) td {
+            background-color: var(--striped-bg, #f8fafc);
+            color: var(--striped-color);
+        }
+    }
+
+    // Container styling for Header and Footer
+    thead.header-row {
+        background-color: var(--theadbg);
+        color: var(--theadcolor);
+        
+        th {
+            background-color: var(--theadbg);
+            color: var(--theadcolor);
+            border-width: var(--hb-width);
+            border-style: var(--hb-style);
+            border-color: var(--hb-color);
+        }
+    }
+    
+    tfoot.footer-row {
+        background-color: var(--tfootbg);
+        color: var(--tfootcolor);
+        
+        td {
+            font-weight: 600;
+            background-color: var(--tfootbg);
+            color: var(--tfootcolor);
+            border-width: var(--cfb-width);
+            border-style: var(--cfb-style);
+            border-color: var(--cfb-color);
+            font-size: var(--tf-font-size);
+        }
+    }
+
+    .table-scroll-indicator {
+        display: none;
+        margin-top: 1rem;
+        text-align: center;
+        padding: 0.75rem;
+        background: #f1f5f9;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #64748b;
+    }
+}
+
+// Mobile Devices
+@media (max-width: 767px) {
+    .wp-block-yen-blocks-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem;
+
+        table {
+            width: max-content;
+            min-width: var(--tm-width, 600px);
+        }
+
+        .table-scroll-indicator {
+            display: block;
+            font-size: var(--tsi-font-size, 0.7rem);
+            color: var(--tsi-color, #94a3b8);
+            margin: var(--tsi-margin, 16px 0);
+        }
+    }
+}
+

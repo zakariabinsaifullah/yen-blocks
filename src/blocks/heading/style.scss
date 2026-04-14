@@ -1,0 +1,40 @@
+.wp-block-yen-blocks-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+
+    &.has-separator {
+        &::before, &::after {
+            content: "";
+            height: var(--yen-separator-height, 2px);
+            background: var(--yen-line-color, #eeeeee);
+            flex-grow: 1;
+        }
+
+        &.is-aligned-left {
+            &::before {
+                display: none;
+            }
+        }
+
+        &.is-aligned-right {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .title-inner {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .title-text {
+        color: var(--yen-title-color);
+        font-size: var(--yen-title-size);
+        margin: 0 !important;
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "yen-blocks/pros-cons",
+    "version": "1.0.0",
+    "title": "Pros Cons",
+    "category": "yen-blocks",
+    "description": "Clean horizontal comparison block with dynamic add/remove items.",
+    "keywords": ["comparison", "pros", "cons", "review"],
+    "supports": {
+        "anchor": true,
+        "html": false,
+        "align": ["wide", "full"],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "attributes": {
+        "prosTitle": {
+            "type": "string",
+            "default": "Pros"
+        },
+        "consTitle": {
+            "type": "string",
+            "default": "Cons"
+        },
+        "pros": {
+            "type": "array",
+            "default": ["Stunning 10-inch size"]
+        },
+        "cons": {
+            "type": "array",
+            "default": ["Might make you start collecting all the Zelda figures"]
+        },
+        "headerBg": {
+            "type": "string"
+        },
+        "headerColor": {
+            "type": "string"
+        },
+        "itemBg": {
+            "type": "string"
+        },
+        "itemColor": {
+            "type": "string"
+        },
+        "borderColor": {
+            "type": "string"
+        },
+        "dividerColor": {
+            "type": "string"
+        },
+        "blockStyle": {
+            "type": "object"
+        }
+    },
+    "textdomain": "yen-blocks",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}
