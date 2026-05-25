@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "yen-blocks/list",
+    "version": "1.0.0",
+    "title": "List",
+    "category": "yen-blocks",
+    "description": "Flexible list block with heading and icon list items.",
+    "example": {},
+    "supports": {
+        "anchor": true,
+        "html": false,
+        "align": ["wide", "full"],
+        "spacing": {
+            "margin": true,
+            "padding": true
+        }
+    },
+    "attributes": {
+        "uniqueId": {
+            "type": "string",
+            "default": ""
+        },
+        "blockStyle": {
+            "type": "object"
+        },
+        "heading": {
+            "type": "string",
+            "default": "List Heading"
+        },
+        "headingTag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "headingColor": {
+            "type": "string"
+        },
+        "itemGap": {
+            "type": "string",
+            "default": "4px"
+        },
+        "mobileIcon": {
+            "type": "string",
+            "default": ""
+        },
+        "listFontSize": {
+            "type": "string"
+        },
+        "headingFontSize": {
+            "type": "string"
+        },
+        "iconSize": {
+            "type": "string"
+        },
+        "mobileIconSize": {
+            "type": "string"
+        }
+    },
+    "textdomain": "yen-blocks",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css",
+    "viewScript": "file:./view.js"
+}
