@@ -4,15 +4,6 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--tcolor, #1e293b);
     background-color: var(--tbg, transparent);
-    border-width: var(--tborder-width, 1px);
-    border-style: var(--tborder-style, solid);
-    border-color: var(--tborder-color, #eee);
-    overflow: hidden;
-    border-radius: 8px;
-
-    th.header-cell + th.header-cell {
-    border-left: var(--chb-width, 1px) var(--chb-style, solid) var(--chb-color, #eee);
-}
 
     &.is-style-separated {
         table {
@@ -43,7 +34,7 @@
         border-collapse: collapse;
         color: var(--tcolor, #1e293b);
         background-color: var(--tbg, transparent);
-        border-width: var(--tborder-width, 1px);
+        border-width: var(--tborder-width, 0px);
         border-style: var(--tborder-style, solid);
         border-color: var(--tborder-color, #eee);
         overflow: hidden;

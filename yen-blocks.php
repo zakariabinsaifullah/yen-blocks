@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Yen Blocks
  * Description:       A native flexible table builder block for the Gutenberg Block Editor.
- * Version:           1.0.3
+ * Version:           1.0.4
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Yen Builder
@@ -28,7 +28,7 @@ class Yen_Blocks {
 	/**
 	 * Plugin version
 	 */
-	public const VERSION = '1.0.3';
+	public const VERSION = '1.0.4';
 
 	/**
 	 * The single instance of the class.
