@@ -1,0 +1,87 @@
+.wp-block-yen-blocks-list {
+    .list-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .list-header-icon {
+        display: none;
+        align-items: center;
+        flex-shrink: 0;
+        color: var(--yen-heading-color, currentColor);
+        overflow: visible;
+
+        svg {
+            width: var(--yen-mobile-icon-size, 28px);
+            height: var(--yen-mobile-icon-size, 28px);
+            display: block;
+            overflow: visible;
+        }
+    }
+
+    .list-heading {
+        color: var(--yen-heading-color, inherit);
+        font-size: var(--yen-heading-font-size, inherit);
+        margin: 0;
+        font-weight: 700;
+        flex: 1;
+    }
+
+    .list-chevron {
+        display: none;
+        align-items: center;
+        flex-shrink: 0;
+        margin-left: auto;
+        color: var(--yen-heading-color, currentColor);
+
+        svg {
+            width: var(--yen-mobile-icon-size, 20px);
+            height: var(--yen-mobile-icon-size, 20px);
+            transition: transform 0.35s ease;
+        }
+    }
+
+    .list-inner {
+        display: flex;
+        flex-direction: column;
+        gap: var(--yen-item-gap, 4px);
+        margin-top: 16px;
+        font-size: var(--yen-list-font-size, inherit);
+    }
+
+    @media (max-width: 768px) {
+        .list-header {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .list-header-icon {
+            display: flex;
+        }
+
+        .list-chevron {
+            display: flex;
+        }
+
+        .list-inner {
+            max-height: 0 !important;
+            overflow: hidden;
+            margin-top: 0 !important;
+            opacity: 0;
+            transition: max-height 0.4s ease, margin-top 0.3s ease, opacity 0.3s ease;
+        }
+
+        &.is-open {
+            .list-inner {
+                max-height: 2000px !important;
+                margin-top: 12px !important;
+                opacity: 1;
+            }
+
+            .list-chevron svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
