@@ -12,21 +12,15 @@ import classNames from 'classnames';
 
 // inspector controls
 import Inspector from './inspector';
+import { normalizeSvg } from '../../utils/svg';
 
 // block edit function
 const Edit = props => {
     const { attributes, setAttributes, isSelected } = props;
-    const { text, icon, textColor, iconColor, iconGap } = attributes;
-
-    const cssVars = {
-        ...(textColor && { '--yen-item-text-color': textColor }),
-        ...(iconColor && { '--yen-item-icon-color': iconColor }),
-        '--yen-icon-gap': iconGap || '14px'
-    };
+    const { text, icon } = attributes;
 
     const blockProps = useBlockProps({
-        className: classNames('yen-blocks-list-item'),
-        style: cssVars
+        className: classNames('yen-blocks-list-item')
     });
 
     return (
@@ -36,7 +30,7 @@ const Edit = props => {
                 {icon && (
                     <span
                         className="list-item-icon"
-                        dangerouslySetInnerHTML={{ __html: icon }}
+                        dangerouslySetInnerHTML={{ __html: normalizeSvg( icon ) }}
                     />
                 )}
                 {!icon && (
@@ -46,7 +40,7 @@ const Edit = props => {
                     className="list-item-text"
                     tagName="span"
                     value={text}
-                    allowedFormats={['core/bold', 'core/italic']}
+                    allowedFormats={['core/bold', 'core/italic', 'core/link']}
                     onChange={value => setAttributes({ text: value })}
                     placeholder={__('List item text', 'yen-blocks')}
                 />

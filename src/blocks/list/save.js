@@ -1,5 +1,6 @@
 import { InnerBlocks, RichText, useBlockProps } from '@wordpress/block-editor';
 import classNames from 'classnames';
+import { normalizeSvg } from '../../utils/svg';
 
 const ChevronIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -9,7 +10,7 @@ const ChevronIcon = () => (
 
 const save = props => {
     const { attributes } = props;
-    const { uniqueId, heading, headingTag, headingColor, itemGap, mobileIcon, listFontSize, headingFontSize, iconSize, mobileIconSize } = attributes;
+    const { uniqueId, heading, headingTag, headingColor, itemGap, mobileIcon, listFontSize, headingFontSize, iconSize, mobileIconSize, textColor, iconColor, iconGap, mobileIconColor } = attributes;
 
     const cssVars = {
         ...(headingColor && { '--yen-heading-color': headingColor }),
@@ -17,7 +18,11 @@ const save = props => {
         ...(listFontSize && { '--yen-list-font-size': listFontSize }),
         ...(headingFontSize && { '--yen-heading-font-size': headingFontSize }),
         ...(iconSize && { '--yen-icon-size': iconSize }),
-        ...(mobileIconSize && { '--yen-mobile-icon-size': mobileIconSize })
+        ...(mobileIconSize && { '--yen-mobile-icon-size': mobileIconSize }),
+        ...(textColor && { '--yen-item-text-color': textColor }),
+        ...(iconColor && { '--yen-item-icon-color': iconColor }),
+        '--yen-icon-gap': iconGap || '14px',
+        ...(mobileIconColor && { '--yen-mobile-icon-color': mobileIconColor })
     };
 
     const blockProps = useBlockProps.save({
@@ -31,7 +36,7 @@ const save = props => {
                 {mobileIcon && (
                     <span
                         className="list-header-icon"
-                        dangerouslySetInnerHTML={{ __html: mobileIcon }}
+                        dangerouslySetInnerHTML={{ __html: normalizeSvg( mobileIcon ) }}
                     />
                 )}
                 <RichText.Content

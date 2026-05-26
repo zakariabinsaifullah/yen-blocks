@@ -43,6 +43,9 @@
             "type": "string",
             "default": ""
         },
+        "mobileIconColor": {
+            "type": "string"
+        },
         "listFontSize": {
             "type": "string"
         },
@@ -54,6 +57,16 @@
         },
         "mobileIconSize": {
             "type": "string"
+        },
+        "textColor": {
+            "type": "string"
+        },
+        "iconColor": {
+            "type": "string"
+        },
+        "iconGap": {
+            "type": "string",
+            "default": "14px"
         }
     },
     "textdomain": "yen-blocks",

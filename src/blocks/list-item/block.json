@@ -27,16 +27,6 @@
         "icon": {
             "type": "string",
             "default": ""
-        },
-        "textColor": {
-            "type": "string"
-        },
-        "iconColor": {
-            "type": "string"
-        },
-        "iconGap": {
-            "type": "string",
-            "default": "14px"
         }
     },
     "textdomain": "yen-blocks",

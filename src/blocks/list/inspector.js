@@ -1,11 +1,11 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
-import { PanelColorControl, NativeSelectControl, NativeUnitControl, NativeTextControl } from '../../components';
+import { PanelColorControl, NativeSelectControl, NativeUnitControl, NativeTextareaControl } from '../../components';
 
 const Inspector = props => {
     const { attributes, setAttributes } = props;
-    const { headingTag, headingColor, itemGap, mobileIcon, listFontSize, headingFontSize, iconSize, mobileIconSize } = attributes;
+    const { headingTag, headingColor, itemGap, mobileIcon, listFontSize, headingFontSize, iconSize, mobileIconSize, textColor, iconColor, iconGap, mobileIconColor } = attributes;
 
     return (
         <InspectorControls>
@@ -29,7 +29,12 @@ const Inspector = props => {
                     value={itemGap}
                     onChange={value => setAttributes({ itemGap: value })}
                 />
-                <NativeTextControl
+                <NativeUnitControl
+                    label={__('Icon Gap', 'yen-blocks')}
+                    value={iconGap}
+                    onChange={value => setAttributes({ iconGap: value })}
+                />
+                <NativeTextareaControl
                     label={__('Mobile Icon (SVG)', 'yen-blocks')}
                     value={mobileIcon}
                     onChange={value => setAttributes({ mobileIcon: value })}
@@ -68,6 +73,21 @@ const Inspector = props => {
                             value: headingColor,
                             onChange: color => setAttributes({ headingColor: color }),
                             label: __('Heading Color', 'yen-blocks')
+                        },
+                        ...( mobileIcon ? [ {
+                            value: mobileIconColor,
+                            onChange: color => setAttributes({ mobileIconColor: color }),
+                            label: __('Mobile Icon Color', 'yen-blocks')
+                        } ] : [] ),
+                        {
+                            value: textColor,
+                            onChange: color => setAttributes({ textColor: color }),
+                            label: __('Item Text Color', 'yen-blocks')
+                        },
+                        {
+                            value: iconColor,
+                            onChange: color => setAttributes({ iconColor: color }),
+                            label: __('Item Icon Color', 'yen-blocks')
                         }
                     ]}
                 />

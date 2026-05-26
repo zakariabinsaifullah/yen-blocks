@@ -9,7 +9,7 @@
         display: none;
         align-items: center;
         flex-shrink: 0;
-        color: var(--yen-heading-color, currentColor);
+        color: var(--yen-mobile-icon-color, var(--yen-heading-color, currentColor));
         overflow: visible;
 
         svg {
